@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish File Downloads and Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('5.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1.site-title {
+            text-align: center;
+            color: #d4a5ff;
+            margin: 20px 0;
+            font-size: 2.5em;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        h1 {
+            color: #d4a5ff;
+        }
+        h2 {
+            color: #c2aaff;
+        }
+        .file-list a {
+            display: block;
+            margin: 20px 0;
+            color: #fff;
+            background-color: #6a0dad;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .file-list a:hover {
+            background-color: #9a50ff;
+        }
+        .external-link a {
+            color: #fff;
+            background-color: #de00ff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .external-link a:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        .program-details {
+            margin-top: 40px;
+            color: #e0e0e0;
+            text-align: left;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 48%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.container');
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const containerPosition = container.getBoundingClientRect().top + window.scrollY;
+                if (scrollPosition > containerPosition + 50) {
+                    container.style.opacity = '1';
+                    container.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1 class="site-title">Welcome to the Smart Onion Warehouse Project</h1>
+    <div class="container">
+        <h1>Files to See</h1>
+
+        <div class="file-list">
+            <a href="IoT-Based Smart Onion Warehouse as.pdf" download>IoT-Based Smart Onion Warehouse as PDF</a>
+            <a href="Optimizing-Onion-Storage-for-Maximum-Yield.pptx" download>IoT-Based Smart Onion Warehouse as PPT</a>
+            <a href="IoT.docx" download>IoT-Based Smart Onion Warehouse as DOC</a>
+        </div>
+
+        <video width="640" height="360" controls>
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>        
+
+        <div class="external-link">
+            <h2>Click the Below Link to See the Real-time Monitoring</h2>
+            <a href="https://thingspeak.mathworks.com/channels/2684392/private_show" target="_blank">Real-time Monitoring</a>
+        </div>
+
+        <div class="program-details">
+            <h2>Project Overview</h2>
+            <p>The IoT-Based Smart Onion Warehouse project integrates Internet of Things (IoT) technology to provide real-time monitoring and automation of storage conditions. This innovative approach ensures the extended shelf life of onions, addressing critical issues such as rotting and decay.</p>
+            
+            <h2>Components and Technical Specifications</h2>
+            <ul>
+                <li><strong>IoT Circuit and Sensors:</strong>
+                    <ul>
+                        <li><strong>DHT11 Temperature & Humidity Sensor:</strong> Monitors the internal climate to maintain optimal conditions for onion storage.</li>
+                        <li><strong>MQ135 Sensor:</strong> Detects ammonia presence to ensure air quality.</li>
+                        <li><strong>MQ2 Sensor:</strong> Tracks carbon monoxide levels for contamination prevention.</li>
+                        <li><strong>ESP32 Dev Kit:</strong> Serves as the central processing unit, collecting and processing data from sensors.</li>
+                    </ul>
+                </li>
+                <li><strong>Ventilation and Heating System:</strong>
+                    <p>The warehouse is equipped with automated fans and vents that regulate airflow, ensuring that all stored onions receive adequate ventilation.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="image-gallery">
+            <img src="2.jpg" alt=" 2 description">
+            <img src="3.jpg" alt=" 3 description">
+            <img src="4.jpg" alt=" 4 description">
+            <img src="1.jpg" alt=" 1 description">
+        </div>
+        </video>
+    </div>
+
+</body>
+</html>
